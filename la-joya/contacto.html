@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Centro Comercial La Joya</title>
+  <meta name="description" content="Escríbenos o visítanos. Contacto, horario y preguntas frecuentes del Centro Comercial La Joya.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="STIAL.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div class="utility-bar">
+    Abierto de lunes a domingo, de 8:00 a.m. a 8:00 p.m.
+    <a href="index.html#como-llegar">Cómo llegar ›</a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Centro Comercial La Joya - Inicio">
+        <img src="https://www.lajoya.com.sv/wp-content/uploads/2020/01/logo.png" alt="Logo Centro Comercial La Joya">
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#locales">Locales</a></li>
+          <li><a href="index.html#restaurantes">Restaurantes</a></li>
+          <li><a href="index.html#promociones">Promociones</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="header-pill" href="tel:+50325238400">(503) 2523-8400</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Contacto</p>
+        <h1>Estamos aquí para <span class="tint-teal">ayudarte</span>.</h1>
+        <p class="lead">Escríbenos tus consultas, sugerencias o dudas sobre los locales y promociones de La Joya.</p>
+      </div>
+    </section>
+
+    <section class="band band--canvas">
+      <div class="container contact-layout">
+
+        <div class="card form-card reveal">
+          <div class="form-body">
+            <h2 class="card-title">Envíanos un mensaje</h2>
+            <p class="card-lead">Los campos marcados con * son obligatorios. El botón abrirá tu programa de correo con el mensaje ya redactado, listo para enviar.</p>
+
+            <!-- Sin backend ni JavaScript: validación 100% nativa de HTML5
+                 (required, type="email", minlength, pattern) y envío por mailto. -->
+            <form id="contact-form" action="mailto:contacto@lajoya.com.sv" method="post" enctype="text/plain">
+              <div class="form-grid">
+
+                <div class="field">
+                  <label for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="3" placeholder="Ej. Ana Pérez" required>
+                </div>
+
+                <div class="field">
+                  <label for="correo">Correo electrónico *</label>
+                  <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="field">
+                  <label for="telefono">Teléfono <span class="hint">(opcional)</span></label>
+                  <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="7000-0000" pattern="[\d\s()+-]{8,}">
+                  <p class="field-hint">Al menos 8 dígitos.</p>
+                </div>
+
+                <div class="field">
+                  <label for="motivo">Motivo *</label>
+                  <select id="motivo" name="motivo" required>
+                    <option value="" selected disabled>Elige una opción</option>
+                    <option value="general">Información general</option>
+                    <option value="locales">Información de locales</option>
+                    <option value="promociones">Promociones y eventos</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+
+                <div class="field field--full">
+                  <label for="mensaje">Mensaje *</label>
+                  <textarea id="mensaje" name="mensaje" minlength="10" placeholder="Cuéntanos en qué te ayudamos" required></textarea>
+                </div>
+
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                <p class="form-note">Si algún campo falta o es inválido, el navegador te lo señalará antes de enviar.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <aside class="card info-card reveal" style="--i:1">
+          <h2>Visítanos</h2>
+          <dl class="details">
+            <dt>Dirección</dt>
+            <dd>Km. 12, Carretera al Puerto de La Libertad<br>Santa Tecla, El Salvador</dd>
+            <dt>Teléfono</dt>
+            <dd><a class="link" href="tel:+50325238400">(503) 2523-8400</a></dd>
+            <dt>Horario</dt>
+            <dd>Lunes a Domingo de 8:00 a.m. a 8:00 p.m.</dd>
+          </dl>
+          <a href="https://www.google.com/maps/search/?api=1&query=Centro+Comercial+La+Joya+Santa+Tecla" class="btn btn-neutral" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes: <details>/<summary> nativos, sin JavaScript. -->
+    <section class="band band--white">
+      <div class="container">
+        <div class="band-head reveal">
+          <h2>Preguntas <span class="tint-orange">frecuentes</span></h2>
+          <p>Respuestas rápidas antes de tu visita</p>
+        </div>
+
+        <div class="faq" data-stagger>
+
+          <details class="faq-item">
+            <summary><span class="faq-icon" aria-hidden="true"></span><span>¿Cuál es el horario de atención?</span></summary>
+            <div class="faq-panel"><p>Abrimos de lunes a domingo, de 8:00 a.m. a 8:00 p.m.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary><span class="faq-icon" aria-hidden="true"></span><span>¿Hay parqueo disponible?</span></summary>
+            <div class="faq-panel"><p>Sí. Estamos sobre la Carretera al Puerto de La Libertad y contamos con amplio parqueo.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary><span class="faq-icon" aria-hidden="true"></span><span>¿Dónde están el supermercado y las farmacias?</span></summary>
+            <div class="faq-panel"><p>Super Selectos y las farmacias San Nicolás, San Rafael y Económicas están en la planta baja.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary><span class="faq-icon" aria-hidden="true"></span><span>¿Hay bancos dentro del centro comercial?</span></summary>
+            <div class="faq-panel"><p>Sí. La zona financiera, en la planta baja, reúne a Davivienda, Agrícola y Cuscatlán.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary><span class="faq-icon" aria-hidden="true"></span><span>¿Dónde queda el gimnasio?</span></summary>
+            <div class="faq-panel"><p>Body Impact está en el segundo nivel.</p></div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>La Joya</h4>
+        <p>Tu centro comercial de conveniencia en Santa Tecla.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <a href="index.html#locales">Locales</a>
+        <a href="index.html#restaurantes">Restaurantes</a>
+        <a href="index.html#promociones">Promociones</a>
+        <a href="index.html#como-llegar">Cómo llegar</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>Km. 12, Carretera al Puerto de La Libertad</p>
+        <p>Santa Tecla, El Salvador</p>
+        <a href="tel:+50325238400">(503) 2523-8400</a>
+      </div>
+      <div class="footer-col newsletter">
+        <h4>Recibe promociones</h4>
+        <form class="newsletter-form" action="mailto:promociones@lajoya.com.sv" method="post" enctype="text/plain">
+          <label for="email" class="visually-hidden">Correo electrónico</label>
+          <input class="field-input" type="email" id="email" name="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+          <button class="btn btn-primary" type="submit">Suscribirme</button>
+          <p class="form-note">Sin spam. Cancelas cuando quieras.</p>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 Centro Comercial La Joya. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

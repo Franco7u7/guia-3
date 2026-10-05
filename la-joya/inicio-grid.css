@@ -1,0 +1,86 @@
+/* ==========================================================================
+   inicio-grid.css · Distribución principal de index.html con CSS Grid
+   Se carga DESPUÉS de STIAL.css (colores, tipografía y componentes).
+   Aquí solo está la distribución: columnas, filas, huecos y ubicación.
+   ========================================================================== */
+
+/* 1. REJILLA DE PÁGINA: 3 columnas con líneas con nombre.
+      Las bandas ocupan todo el ancho (full) y su contenido la columna central. */
+.inicio main {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(24px, 1fr)
+    [content-start] minmax(0, 1200px)
+    [content-end] minmax(24px, 1fr)
+    [full-end];
+}
+.inicio main > section {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: subgrid;   /* hereda las líneas de <main> */
+  padding-inline: 0;
+}
+.inicio main > section > .container {
+  grid-column: content-start / content-end;
+  max-width: none;
+  margin: 0;
+}
+
+/* 2. REJILLA DE CONTENIDO: 12 columnas dentro de cada .container.
+      Por defecto cada hijo ocupa todas las columnas (1 / -1). */
+.inicio .container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 32px;
+}
+.inicio .container > * { grid-column: 1 / -1; }
+.inicio .band-head { margin-bottom: 0; }
+
+/* 3. MÓVIL (base): todo en una columna */
+.inicio .grid,
+.inicio .visit { grid-template-columns: 1fr; }
+.inicio .hero-media { margin-top: 0; aspect-ratio: 16 / 9; }
+.inicio .sec-locales .card-photo-wrap { position: relative; }
+.inicio .footer-grid { grid-template-columns: 1fr; }
+
+/* 4. TABLET (600px+): tarjetas en 2 columnas */
+@media (min-width: 600px) {
+  .inicio .grid,
+  .inicio .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 5. ESCRITORIO (900px+): composición con columnas y filas explícitas */
+@media (min-width: 900px) {
+
+  /* Hero: texto en 5 columnas y video en 7 */
+  .inicio .hero h1 { font-size: clamp(2.25rem, 4.2vw, 3.5rem); }
+  .inicio .hero-copy  { grid-column: 1 / span 5; align-self: center; }
+  .inicio .hero-media { grid-column: 6 / -1; align-self: center; aspect-ratio: 4 / 3; }
+
+  /* Beneficios: título a la izquierda (4 col.) y tarjetas 2×2 (8 col.) */
+  .inicio .sec-beneficios .band-head { grid-column: 1 / span 4; align-self: start; }
+  .inicio .sec-beneficios .grid { grid-column: 5 / -1; grid-template-columns: repeat(2, 1fr); }
+
+  /* Locales: composición asimétrica. Columnas 2fr 1fr 1fr */
+  .inicio .sec-locales .grid { grid-template-columns: 2fr 1fr 1fr; }
+  .inicio .sec-locales .grid > :nth-child(1) { grid-row: span 2; }     /* destacada: 2 filas */
+  .inicio .sec-locales .grid > :nth-child(4) { grid-column: span 2; }  /* ancha: 2 columnas */
+  .inicio .sec-locales .card { display: flex; flex-direction: column; }
+  .inicio .sec-locales .card-photo-wrap { flex: 1; min-height: 180px; }
+  .inicio .sec-locales .card-photo { position: absolute; inset: 0; aspect-ratio: auto; }
+
+  /* Restaurantes: 3 columnas × 2 filas */
+  .inicio .sec-restaurantes .grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Promociones: 3 columnas */
+  .inicio .sec-promos .grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Cómo llegar: información (5 col.) y mapa (7 col.) */
+  .inicio .visit { grid-template-columns: repeat(12, 1fr); }
+  .inicio .visit-info { grid-column: 1 / span 5; }
+  .inicio .visit-map  { grid-column: 6 / -1; }
+
+  /* Pie de página: 4 columnas con anchos distintos */
+  .inicio .footer-grid { grid-template-columns: 1.3fr 1fr 1.3fr 1.5fr; }
+}
