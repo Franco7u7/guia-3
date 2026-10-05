@@ -230,7 +230,6 @@ a:focus-visible {
     align-self: flex-start;
 }
 
-/* Botón flotante para volver arriba */
 .volver-arriba {
     position: fixed;
     right: 1rem;
