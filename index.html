@@ -1,100 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entregas: Desarrollo Web</title>
-  <style>
-    /* Estilos basados en la captura */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      background-color: #ffffff;
-      color: #550000; /* Tono vino / marrón rojizo característico */
-      display: flex;
-      justify-content: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Desarrollo Web</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    .container {
-      width: 100%;
-      max-width: 900px;
-    }
+        body {
+            background-color: #f0f4f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1a2530;
+            padding: 60px 20px;
+        }
 
-    /* Encabezado principal centrado */
-    h1 {
-      text-align: center;
-      font-size: 2.3rem;
-      font-weight: 700;
-      color: #4a0505;
-      margin-top: 0;
-      margin-bottom: 3.5rem;
-    }
+        .contenedor {
+            max-width: 650px;
+            margin: 0 auto;
+        }
 
-    /* Título de la guía con línea divisoria inferior */
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #4a0505;
-      margin: 0;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e0d0d0;
-    }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0b1a30;
+            margin-bottom: 12px;
+        }
 
-    /* Subtítulo Ejercicios */
-    h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #4a0505;
-      margin-top: 1.8rem;
-      margin-bottom: 1.2rem;
-    }
+        .linea-separadora {
+            height: 3px;
+            background-color: #3b82f6;
+            width: 100%;
+            margin-bottom: 22px;
+        }
 
-    /* Lista de enlaces con viñetas cuadradas */
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-      margin: 0;
-    }
+        .subtitulo {
+            font-size: 1.05rem;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
 
-    li {
-      margin-bottom: 0.85rem;
-      color: #4a0505;
-    }
+        .lista-enlaces {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
 
-    /* Enlaces subrayados con tipografía negrita */
-    li a {
-      color: #4a0505;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: underline;
-      transition: opacity 0.2s ease;
-    }
+        .btn-enlace {
+            display: block;
+            background-color: #4382ec;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 16px 20px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
 
-    li a:hover {
-      opacity: 0.75;
-    }
-  </style>
+        .btn-enlace:hover {
+            background-color: #2b6cb0;
+            transform: translateY(-1px);
+        }
+
+        .btn-enlace:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Título principal -->
-    <h1>Entregas: Desarrollo Web</h1>
+    <main class="contenedor">
+        <h1>Guía de Desarrollo Web</h1>
+        <div class="linea-separadora"></div>
+        <p class="subtitulo">Ejemplos y ejercicios desarrollados por Franco7u7</p>
 
-    <!-- Guía y sus ejercicios -->
-    <h2>Guía 1</h2>
-
-    <h3>Ejercicios</h3>
-    <ul>
-      <li><a href="Primero.html">Maravillas del Mundo</a></li>
-      <li><a href="Segundo.html">Compañía Miau (Menú Lateral)</a></li>
-      <li><a href="ejercicio.html">Ejemplo Z-index (Escalera de Diamantes)</a></li>
-      <li><a href="index.html">Centro Comercial La Joya - Inicio</a></li>
-      <li><a href="nosotros.html">Centro Comercial La Joya - Nosotros</a></li>
-      <li><a href="contacto.html">Centro Comercial La Joya - Contacto</a></li>
-    </ul>
-  </div>
+        <nav class="lista-enlaces">
+            <a href="la-joya/index.html" class="btn-enlace">Ejercicio IA - Centro Comercial La Joya</a>
+            <a href="ejemplo1/Primero.html" class="btn-enlace">Ejemplo 1 - Las Siete Maravillas del Mundo</a>
+            <a href="ejemplo2/Segundo.html" class="btn-enlace">Ejemplo 2 - Compañía Miau (Menú Lateral)</a>
+            <a href="ejercicio/ejercicio.html" class="btn-enlace">Ejercicio - Posicionamiento y Z-Index</a>
+        </nav>
+    </main>
 
 </body>
 </html>
